@@ -281,3 +281,87 @@
 # print(newStr)
 
 
+# n = input("Enter string: ")
+# i = 0
+# print("The even characters are:")
+# while i<len(n):
+#     print(n[i], end=",")
+#     i=i+2
+# print()
+
+# i =1
+# print("The odd characters are:")
+# while i<len(n):
+#     print(n[i], end=",")
+#     i=i+2
+
+
+
+# n= input("Enter string:")
+# s1 = ""
+# s2 = ""
+# output= ""
+
+# for elem in n:
+#     if elem.isalpha():
+#         s1 = s1 + elem
+#     else:
+#         s2= s2 + elem
+
+# output= sorted(s1)+sorted(s2)
+# print("".join(output))
+
+# print(output)
+
+#A4B4C3
+
+# n = input("Enter a string: ")
+# output=""
+
+# for elem in n:
+#     if elem.isalpha():
+#         output = output + elem
+#         perivous = elem
+#     else:
+#         output = output + perivous*(int(elem)-1)
+
+# print(output)
+
+#a4k3b2
+# n = input("Enter a string: ")
+# output = ""
+# for elem in n:
+#     if elem.isalpha():
+#         output = output + elem
+#         previous = elem
+#     else:
+#         newchr=chr(ord(previous)+int(elem))
+#         output = output+ newchr
+
+# print(output)
+
+
+# s1= input("Enter a string: ")
+# s2 = input("Enter a string: ")
+# i=j=0
+# output=""
+
+# while i<len(s1) or j<len(s2):
+#     if i<len(s1):
+#         output = output+ s1[i]
+#         i = i+1
+#     if j<len(s2):
+#         output = output +s2[j]
+#         j=j+1
+
+# print(output)
+
+# s = input("Enter a string: ")
+# output=''
+# for elem in s:
+#     if elem in output:
+#         pass
+#     else:
+#         output= output+elem
+
+# print(output)
