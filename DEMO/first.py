@@ -365,3 +365,17 @@
 #         output= output+elem
 
 # print(output)
+
+
+s = input("Enter a string: ")
+
+dic={}
+
+for elem in s:
+    if elem in dic.keys():
+        dic[elem]=dic[elem]+1
+    else:
+        dic[elem]=1
+
+for k,v in dic.items():
+    print("{}:{} occurs ".format(k , v) )
