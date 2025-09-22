@@ -46,3 +46,16 @@
 # l2= [w.swapcase() for w in string]
 # print(" ".join(l2))
 
+
+
+# n= input("Enter a string: ")
+# s=len(n)
+# vowels=["a","e","i","o","u"]
+# found=[]
+# for letter in n:
+#     if letter in vowels:
+#         if letter not in found:
+#             found.append(letter)
+# print(found)
+
+
