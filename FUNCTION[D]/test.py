@@ -42,8 +42,50 @@
 
 
 
-def wish(name="Guest"):
-    print("Hello" , name, "Good Evening")
+# def wish(name="Guest"):
+#     print("Hello" , name, "Good Evening")
 
-wish("krishna")
-wish()
+# wish("krishna")
+# wish()
+
+
+
+
+
+# def sum(*n):
+#     result=0
+#     for x in n:
+#         result= result + x
+#     return result
+
+# print(sum(10))
+# print(sum())
+# print(sum(10,20,30))
+
+
+
+# def sum(name,*n):
+#     result=0
+#     for x in n:
+#         result= result + x
+#     print("The sum of",name , "is: ", result)
+
+# (sum("RAVI",10,20,30,40))
+# # (sum("Krishna"))
+# (sum("TINNY"  ,10,20,30 ))
+
+
+
+#kwargs
+
+def display(**kwargs):
+    print("RECORDS:")
+    for k,v in kwargs.items():
+        print(k,":",v)
+    print()
+    
+
+
+display(name="krishna" , age=19, gf="none" , wife="none")
+display(name="trisha" , age=21, bf="none" , husband="applicable")
+
