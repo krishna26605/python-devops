@@ -78,14 +78,56 @@
 
 #kwargs
 
-def display(**kwargs):
-    print("RECORDS:")
-    for k,v in kwargs.items():
-        print(k,":",v)
-    print()
+# def display(**kwargs):
+#     print("RECORDS:")
+#     for k,v in kwargs.items():
+#         print(k,":",v)
+#     print()
     
 
 
-display(name="krishna" , age=19, gf="none" , wife="none")
-display(name="trisha" , age=21, bf="none" , husband="applicable")
+# display(name="krishna" , age=19, gf="none" , wife="none")
+# display(name="trisha" , age=21, bf="none" , husband="applicable")
 
+
+#global and local variable 
+
+# a=10
+# def f1():
+#     # global a                          #will globalise a=777 so a=10 will replace by a=777 and that a=777 will available to other functions as well. 
+#     a=777 
+#     print("a: ",a)                     #gives a=777
+#     print(globals()['a'])                   #gives a=10 
+
+# def f2():
+#     print("a: ",a)
+
+
+# f1()
+# f2()
+
+
+
+
+#Recursive function
+
+
+# def factorial(n):
+#     if n == 0:
+#         result =1
+#     else:
+#         result=n*factorial(n-1) 
+#     return result
+
+# print(factorial(5))
+
+
+
+
+
+
+#Anonymous Function
+
+
+s=lambda n:n*n
+print(s(4))
