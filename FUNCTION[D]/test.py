@@ -247,6 +247,68 @@
 #         print("Inner function executed...")
 #     inner()
 
-
-
 # outer()
+
+
+
+
+
+
+
+#NOTE : How to access inner function outside of function
+
+# def outer():
+#     print("OUTER FUNCTION EXECUTED....")
+#     def inner():
+#         print("INNER FUNCTION EXECUTED...!")
+#     return inner
+
+# f1=outer() --------->  Since outer function returning inner fuction so now f1 carrying inner function
+
+# f1()---------------> Therefore this will directly call inner function --> INNER FUNCTION EXECUTED...!
+
+
+
+
+#DECORATORS
+
+# def decorator(func):
+#     def inner(name):
+#         if name=="XYZ":
+#             print("HELLO XYZ BAD MORNING")
+#         else:
+#             func(name)
+#     return inner
+
+
+
+# @decorator-------------------------------> use this if you only want extended funxtionality
+# def wish(name):
+#     print("HELLO GOOD MORNING", name)
+
+# decorFunction = decorator(wish)----------> Extended functionality is added in decorFunction. Now using decorFunction we can use extended functionality and just by using wish() we can use normal function.
+
+# decorFunction("XYZ")
+# wish("XYZ")
+
+
+
+
+#EXAMPLE-2
+
+# def smartDivision(func):
+#     def inner(a,b):
+#         if b==0:
+#             print("Can't divide by zero...!")
+#         else:
+#             return func(a,b)
+#     return inner   
+
+
+# @smartDivision
+# def division(a,b):
+#     return a/b
+
+
+# print(division(10,5))
+# print(division(10,0))
