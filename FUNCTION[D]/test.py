@@ -203,3 +203,50 @@
 # print(l3)
 
 # print(l3) --------------------------------->  [10, 40, 90, 160]
+
+
+
+
+#reduce() fuction
+
+# from functools import reduce
+
+# l=[10,20,30,40,50]
+
+# result=reduce(lambda x,y:x+y , l)
+# print(result) 
+
+
+
+
+
+#function aliasing
+
+# def wish(name):
+#     print("GOOD MORNING",name)
+
+# greet=wish
+# wish("KRISHNA")
+# greet("DURGA")
+
+# del greet
+
+# wish("XYZ")
+# greet("KRISHNA AND DURGA") ----------------->  NameError: name 'greet' is not defined
+
+
+
+
+
+#NESTED FUNCTIONS
+
+
+# def outer():
+#     print("Outer functions executed...")
+#     def inner():
+#         print("Inner function executed...")
+#     inner()
+
+
+
+# outer()
