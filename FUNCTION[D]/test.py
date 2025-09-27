@@ -129,5 +129,77 @@
 #Anonymous Function
 
 
-s=lambda n:n*n
-print(s(4))
+# s=lambda n:n*n
+# print(s(4))
+
+
+
+
+
+#filter()
+
+# WITHOUT LAMBDA
+# def iseven(n):
+#     if n%2==0:
+#         return True
+#     else:
+#         return False
+    
+# l=[0,5,10,20,25,30]
+# l1=filter(iseven,l)
+# # print(l1)-----------------------> <filter object at 0x000001425C0BB8B0>
+
+# l1=list(filter(iseven,l))
+# # print(l1) -------------------------> [0, 10, 20, 30] all even numbers
+
+
+
+
+#Filter() WITH LAMBDA
+
+
+# l=[0,5,10,15,20,25,30]
+
+# l1=list(filter(lambda x:x%2==0, l))
+
+# print(l1)
+
+
+
+
+
+#map()  WITHOUT LAMBDA
+
+
+# def double(x):
+#     return 2*x
+# l=[0,5,10,20,25,30]
+# l2=map(double,l)
+# # print(l2) ---------------------->   <map object at 0x00000218102DB7C0>
+
+# l2=list(map(double,l))
+# # print(l2) ------------------------>    [0, 10, 20, 40, 50, 60] all numbers are doubled and the input values and output values are same 
+
+
+
+
+#map()  WITH LAMBDA
+
+# l=[0,5,10,15,20,25,30]
+# l1=list(map(lambda x:2*x, l))
+# print(l1) ---------------------------->  [0, 10, 20, 30, 40, 50, 60] 
+
+
+
+
+#NOTE: We can apply map() function on multiple sequences , if both sequence contain same number of elements, if sequence is not same then extra numbers will be ignored --> no error generated
+
+# example:
+
+# l1=[1,2,3,4,5]
+# l2=[10,20,30,40,50]
+
+# l3=list(map(lambda x,y: x*y , l1,l2))
+# print(l3)
+
+# print(l3) --------------------------------->  [10, 40, 90, 160]
