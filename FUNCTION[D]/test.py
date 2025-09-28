@@ -341,26 +341,26 @@
 #----------------------------------------------------------------
 
 
-def decor1(func):
-    def inner():
-        x=func()
-        print("EXUECUTED DECOR-1")
-        return x*x
-    return inner
+# def decor1(func):
+#     def inner():
+#         x=func()
+#         print("EXUECUTED DECOR-1")
+#         return x*x
+#     return inner
 
-def decor2(func):
-    def inner():
-        x=func()
-        print("EXUECUTED DECOR-2")
-        return 2*x
-    return inner
+# def decor2(func):
+#     def inner():
+#         x=func()
+#         print("EXUECUTED DECOR-2")
+#         return 2*x
+#     return inner
 
-@decor1
-@decor1
-def num():
-    return 10
+# @decor1
+# @decor1
+# def num():
+#     return 10
 
-print(num())
+# print(num())
 
 
 
@@ -385,3 +385,42 @@ print(num())
 
 # wish("Krishna")
 # wish("Sunny")
+
+
+
+
+#Generators
+
+
+# def mygen():
+#     yield "A"
+#     yield "B"
+#     yield "C"
+#     yield "D"
+#     yield "E"
+#     yield "F"
+
+# d= mygen()
+
+# print(next(d)) -------------------> A
+# print(next(d)) -------------------> B
+# print(next(d)) -------------------> C
+
+
+
+
+
+# def countdown(num):  ------------------------->  This wont store in memory so good performance and speed wise as well.
+#     print("Countdown Started....")
+#     while num>0:
+#         yield num
+#         num=num-1
+
+# d=countdown(7)
+# for x in d:
+#     print(x)
+
+       #OR
+# l=[x for x in range(7,0,-1)]--------------> This one stored in memory so performance wise not good
+# for x in l:
+#     print(x)
