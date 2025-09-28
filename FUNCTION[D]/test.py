@@ -424,3 +424,34 @@
 # l=[x for x in range(7,0,-1)]--------------> This one stored in memory so performance wise not good
 # for x in l:
 #     print(x)
+
+
+# def firstnnumber(num):
+#     i=1
+#     while i<=num:
+#         yield i
+#         i=i+1
+       
+
+
+# d= firstnnumber(6)
+# for x in d:
+#     print(x)
+
+
+
+# Fibonacci number = sum of previous two numbers -->  0,1,1,2,3,5,8,13
+
+
+# def fibo():
+#     a,b=0,1
+#     while True:
+#         yield a
+#         a,b=b,a+b
+
+# d= fibo()
+# for x in d:
+#     if x>100:
+#         break
+#     print(x)
+
