@@ -312,3 +312,76 @@
 
 # print(division(10,5))
 # print(division(10,0))
+
+
+#NOTE: multiple decorator can be applied to single function
+
+
+# def decor(func):
+#     def inner(name):
+#         print("First decor function executed...")
+#         func(name)
+#     return inner
+
+# def decor2(func):
+#     def inner(name):
+#         print("Second decor executed....")
+#         func(name)
+#     return inner 
+
+
+# @decor
+# @decor2
+# def wish(name):
+#     print("Hello good morning", name)
+
+
+# wish("durga")
+
+#----------------------------------------------------------------
+
+
+def decor1(func):
+    def inner():
+        x=func()
+        print("EXUECUTED DECOR-1")
+        return x*x
+    return inner
+
+def decor2(func):
+    def inner():
+        x=func()
+        print("EXUECUTED DECOR-2")
+        return 2*x
+    return inner
+
+@decor1
+@decor1
+def num():
+    return 10
+
+print(num())
+
+
+
+# l=(x*x for x in range(10000000000000000))
+# for x in l:
+#     print(x)
+
+
+
+# def decor(wish):
+#     def inner(name):
+#         if name == "Sunny":
+#             print("BAD MORNING SUNNY...!")
+#         else:
+#             wish(name)
+#     return inner
+
+# @decor
+# def wish(name):
+#     print("HELLO GOOD MORNING", name)
+
+
+# wish("Krishna")
+# wish("Sunny")
