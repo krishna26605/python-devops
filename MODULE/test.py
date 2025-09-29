@@ -46,3 +46,40 @@
 # print(__annotations__)
 # print(__path__)
 
+# import math
+
+# help(math)
+
+
+
+from random import *
+
+# for i in range(10):
+#     print(random())        -----------> exclusive random() always give float value between 0 and 1 and 0 and 1 is exclusive
+
+
+# for i in range(10):
+#     print(randint(1,100))  ------> randint() give int value in 1,100 inclusive 1 and 100
+
+
+
+# for i in range(10):
+#     print(uniform(1,10))  --------> uniform() give float value between 1,10 exclusive 1 and 10
+
+# l=["krishna","durga","sunny","bunny"]
+# for i in range(10):
+#     print(choice(l))
+
+
+
+# WAP : six digit otp
+
+# for i in range(6):
+#     print(randint(0,9), end="")
+
+
+#WAP: 1,3,5--alphabets and 2,4,6 digits
+
+
+# for i in range(6):
+#     print(chr(randint(65,65+25)), randint(0,9) , chr(randint(65,65+25)), randint(0,9), chr(randint(65,65+25)),randint(0,9) , sep="")
