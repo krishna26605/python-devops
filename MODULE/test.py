@@ -17,3 +17,32 @@
 # a(10,20)
 # s(20,10)
 # p(10,20)
+
+
+
+# import krishnamath
+# import time
+# import math
+# from importlib import reload
+
+# time.sleep(15)
+# reload(krishnamath)
+# import krishnamath
+# print("This is last line of code...")
+
+# print(dir(math))
+
+
+# print(__doc__)
+# print(__loader__)
+# print(__name__)
+# print(__package__)
+# print(__spec__)
+# print(__cached__)
+# print(__file__)
+# print(__builtins__)
+# print(__package__)
+# print(__dict__)
+# print(__annotations__)
+# print(__path__)
+
