@@ -1,0 +1,21 @@
+INFO:root:The new request arrives..
+INFO:root:Execution completed..
+INFO:root:The new request arrives..
+INFO:root:Execution completed..
+INFO:root:The new request arrives..
+INFO:root:Execution completed..
+INFO:root:The new request arrives..
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "C:\Users\Krishna\OneDrive\Desktop\PYTHON-FULL\LOGGING_DEBUGING\test.py", line 32, in <module>
+    print(x/y)
+          ~^~
+ZeroDivisionError: division by zero
+INFO:root:Execution completed..
+INFO:root:The new request arrives..
+ERROR:root:invalid literal for int() with base 10: 'ten'
+Traceback (most recent call last):
+  File "C:\Users\Krishna\OneDrive\Desktop\PYTHON-FULL\LOGGING_DEBUGING\test.py", line 31, in <module>
+    y=int(input("Enter second number: "))
+ValueError: invalid literal for int() with base 10: 'ten'
+INFO:root:Execution completed..
