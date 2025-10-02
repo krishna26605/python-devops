@@ -70,4 +70,24 @@
 # ---------------------------------------------------------------
 
 
+#USER DEFINED EXCEPTIONS
 
+#Defining customised Exception
+
+class TooYoungException(Exception):
+    def __init__(self,arg):
+        self.msg=arg
+
+
+class TooOldException(Exception):
+    def __init__(self,arg):
+        self.msg=arg
+
+
+age=int(input("Enter your age: "))
+if age>60:
+    raise TooYoungException("You are to young to marry...., Marry next birth now😊!")
+elif age<18:
+    raise TooOldException("You are to old to get marry....!😊")
+else:
+    print("Thanks For registration, we will get back to you with best match😊")
