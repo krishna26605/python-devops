@@ -175,11 +175,57 @@
 
 
 #READING DATA FROM CSV FILE:
-import csv
-f=open('emoplyeedata.csv', 'r')
-r=csv.reader(f)
-data=list(r)
-for line in data:
-    for word in line:
-        print(word , '\t', end='')
-    print()
+# import csv
+# f=open('emoplyeedata.csv', 'r')
+# r=csv.reader(f)
+# data=list(r)
+# for line in data:
+#     for word in line:
+#         print(word , '\t', end='')
+#     print()
+
+
+
+
+
+
+
+
+#ZIPPING AND UNZIPPING
+
+
+
+# Zipping data done...
+# from zipfile import *
+
+# f=ZipFile("files.zip","w",ZIP_DEFLATED)
+# f.write("cricketers.txt")
+# f.write("timepass.txt")
+# f.write("heros.txt")
+# print("Zipping file done successfully..")
+# f.close()
+
+
+
+
+# Unzipping data ....
+
+# from zipfile import *
+
+# f=ZipFile("files.zip",'r', ZIP_STORED)
+# names = f.namelist()
+# for name in names:
+#     print("Files name: ", name)
+#     print("The Content of File is :")
+#     f=open(name , "r")
+#     print(f.read())
+#     print()
+
+
+
+
+# WORKING WITH DIRECTORIES
+
+import os
+currentDirectory= os.getcwd()
+print(currentDirectory)    #------------------->  C:\Users\Krishna\OneDrive\Desktop\PYTHON-FULL\FILE_HANDLING
