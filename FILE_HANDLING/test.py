@@ -83,19 +83,103 @@
 
 # seek()
 
+# data = "ALL STUDENTS ARE STUPIDS"
+# f= open('test.txt', 'w')
+# f.write(data)
+
+# with open('test.txt', 'r+')as f:
+#     list=f.read()
+#     print(list)
+#     print("The current cursor position is: ", f.tell())
+#     f.seek(17)     #------------------> Jumps to 17th position 
+#     f.write("GEMS...!") # -----------------> Override the STUPIDS with GEMS 
+#     f.seek(0)  # ----------------------> then again jumps to zero position
+#     list=f.read()  # ------------------> from pointer at zero therefore read all data 
+#     print("DATA AFTER MODIFICATIONS..")
+#     print(list)            #---------------> print the modified data 
 
 
-data = "ALL STUDENTS ARE STUPIDS"
-f= open('test.txt', 'w')
-f.write(data)
 
-with open('test.txt', 'r+')as f:
-    list=f.read()
-    print(list)
-    print("The current cursor position is: ", f.tell())
-    f.seek(17)     #------------------> Jumps to 17th position 
-    f.write("GEMS...!") # -----------------> Override the STUPIDS with GEMS 
-    f.seek(0)  # ----------------------> then again jumps to zero position
-    list=f.read()  # ------------------> from pointer at zero therefore read all data 
-    print("DATA AFTER MODIFICATIONS..")
-    print(list)            #---------------> print the modified data 
+
+
+# WAP : TO FIND NO. OF LINE , WORD , CHARACTER PRESENT IN A LINE 
+# import os
+# fname= input("Enter a file name: ")
+# if os.path.isfile(fname):
+#     print("File Exist,",fname)
+#     f=open(fname, 'r')
+# else:
+#     print("File does not exixt with name",fname)
+
+# lcount=wcount=ccount=0
+
+# for l in f:
+#     lcount=lcount+1
+#     ccount=ccount+len(l)
+#     words= l.split()
+#     wcount=wcount+len(words)
+
+# print("The line count is:", lcount)
+# print("The word count is:", wcount)
+# print("The character count is:", ccount)
+
+
+
+
+
+
+#PROGRAM TO COPY BINARY FILE 
+
+# HANDLING BINARY FILES:
+
+# f1=open("p-maharaj.jpg",'rb')
+# f2=open('new-p-maharaj.png','wb')
+
+# bytes=f1.read()
+# f2.write(bytes)
+
+# print("The new file is new-p-maharaj")
+
+# -------------------------------------------------------------
+
+
+# f1=open("p-maharaj.jpg",'rb')
+# f2=open('new-p-maharaj.jpg','wb')
+
+# bytes=f1.read()
+# f2.write(bytes)
+
+# print("The new file is new-p-maharaj")
+
+
+
+
+
+#HANDLING CSV FILES: USING CSV MODULE 
+
+# WRITING DATA TO CSV FILE:
+# import os,csv
+
+# with open("emoplyeedata.csv", 'w', newline='') as f:
+#     w=csv.writer(f)
+#     w.writerow(["EmployeeNumber", "EmployeeName","EmployeeSalary", "EmployeeAdddress"])
+#     n=int(input("Enter the Number of employees: "))
+#     for i in range(n):
+#         enumber=int(input("Enter EmployeeNumber: "))
+#         ename=input("Enter Employeename: ")
+#         esal=float(input("Enter EmployeeSalary: "))
+#         eaddr=input("Enter EmployeeAddress: ")
+#         w.writerow([enumber,ename,esal,eaddr])
+
+# print("CSV file written successfully...")
+
+
+#READING DATA FROM CSV FILE:
+import csv
+f=open('emoplyeedata.csv', 'r')
+r=csv.reader(f)
+data=list(r)
+for line in data:
+    for word in line:
+        print(word , '\t', end='')
+    print()
