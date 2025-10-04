@@ -226,6 +226,30 @@
 
 # WORKING WITH DIRECTORIES
 
-import os
-currentDirectory= os.getcwd()
-print(currentDirectory)    #------------------->  C:\Users\Krishna\OneDrive\Desktop\PYTHON-FULL\FILE_HANDLING
+# import os
+# currentDirectory= os.getcwd()
+# print(currentDirectory)    #------------------->  C:\Users\Krishna\OneDrive\Desktop\PYTHON-FULL\FILE_HANDLING
+
+
+
+
+# import os 
+# os.system("notepad")
+
+
+
+
+import os 
+from datetime import *
+stat= os.stat("test.py")
+print(stat)  #---------------------->  os.stat_result(st_mode=33206, st_ino=313000174102260714, st_dev=9847744664029331884, st_nlink=1, st_uid=0, st_gid=0, st_size=5280, st_atime=1759594322, st_mtime=1759594321, st_ctime=1759422397)
+print("The file size in bytes is : ", stat.st_size)
+print("The file last access time is : ", datetime.fromtimestamp(stat.st_atime))
+print("The file last modified time is : ", datetime.fromtimestamp(stat.st_mtime))
+# print("The file last access time is : ", datetime.fromtimestamp(stat.st_atime))
+
+
+
+# import datetime
+
+# print(dir(datetime))
