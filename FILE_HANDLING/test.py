@@ -239,13 +239,13 @@
 
 
 
-import os 
-from datetime import *
-stat= os.stat("test.py")
-print(stat)  #---------------------->  os.stat_result(st_mode=33206, st_ino=313000174102260714, st_dev=9847744664029331884, st_nlink=1, st_uid=0, st_gid=0, st_size=5280, st_atime=1759594322, st_mtime=1759594321, st_ctime=1759422397)
-print("The file size in bytes is : ", stat.st_size)
-print("The file last access time is : ", datetime.fromtimestamp(stat.st_atime))
-print("The file last modified time is : ", datetime.fromtimestamp(stat.st_mtime))
+# import os 
+# from datetime import *
+# stat= os.stat("test.py")
+# print(stat)  #---------------------->  os.stat_result(st_mode=33206, st_ino=313000174102260714, st_dev=9847744664029331884, st_nlink=1, st_uid=0, st_gid=0, st_size=5280, st_atime=1759594322, st_mtime=1759594321, st_ctime=1759422397)
+# print("The file size in bytes is : ", stat.st_size)
+# print("The file last access time is : ", datetime.fromtimestamp(stat.st_atime))
+# print("The file last modified time is : ", datetime.fromtimestamp(stat.st_mtime))
 # print("The file last access time is : ", datetime.fromtimestamp(stat.st_atime))
 
 
@@ -253,3 +253,31 @@ print("The file last modified time is : ", datetime.fromtimestamp(stat.st_mtime)
 # import datetime
 
 # print(dir(datetime))
+
+
+
+#PICKLING AND UNPICKLING 
+
+#EXAMPLE:
+import pickle
+class Employee:
+    def __init__(self, eno, ename, esal, eaddr):
+        self.eno=eno
+        self.ename=ename
+        self.esal=esal
+        self.eaddr=eaddr
+    
+    def display(self):
+        print(self.eno ,"\t", self.ename, "\t", self.esal, "\t" , self.eaddr)
+
+
+with open("pickling_demo.txt", "wb") as f:
+    e=Employee(100,"Durga", 1000 , "Hyd")
+    pickle.dump(e , f)
+    print("Pickling of object done successfully...!") 
+
+
+with open("pickling_demo.txt", "rb") as f:
+    obj=pickle.load(f)
+    print("Employee Info after unpickling...")
+    obj.display()
