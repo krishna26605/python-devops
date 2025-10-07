@@ -24,3 +24,22 @@
 # print(s1.__doc__)  #----------->  This is Student class with required data
 # s1.display() #------------------->  The student name is Durga , Student rollno is 101 and Student marks is 99
 
+
+
+
+
+
+
+
+
+
+class Test:
+    x=10
+    def __init__(self):
+        self.y=20
+
+t1=Test()
+t2=Test()
+print(t2.x)
+Test.x=222
+print(Test.__dict__)
