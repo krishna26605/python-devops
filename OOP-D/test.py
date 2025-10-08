@@ -33,13 +33,78 @@
 
 
 
-class Test:
-    x=10
-    def __init__(self):
-        self.y=20
+# class Test:
+#     x=10
+#     def __init__(self):
+#         self.y=20
 
-t1=Test()
-t2=Test()
-print(t2.x)
-Test.x=222
-print(Test.__dict__)
+# t1=Test()
+# t2=Test()
+# print(t2.x)
+# Test.x=222
+# print(Test.__dict__)
+
+
+
+
+
+
+# Instance method
+
+
+# class Test:
+#     def __init__(self, name, marks):
+#         self.name=name
+#         self.marks=marks
+    
+#     def m1(self):
+#         print("Hi", self.name)
+#         print("Your name:", self.name)
+#         print("Your marks :", self.marks)
+
+#     def grade(self):
+#         if self.marks>60:
+#             print("You got 'A' Grade")
+#         elif self.marks>50:
+#             print("You got 'B' Grade")
+#         elif self.marks>=35:
+#             print("You got 'C' Garde")
+#         else:
+#             print("You are failed...")
+
+
+# n=int(input("Enter the number of students: "))
+# for i in range(n):
+#     name=input("Enter Student name: ")
+#     marks=int(input("Enter Student Marks: "))
+#     s1=Test(name,marks)
+#     s1.m1()
+#     s1.grade()
+
+
+
+#Getter and setter method 
+
+
+class Student:
+    def setName(self, name):
+        self.name=name
+    def getName(self):
+        return self.name
+    
+    def setMarks(self, marks):
+        self.marks=marks
+    def getMarks(self):
+        return self.marks    
+    
+
+n=int(input("Enter the Number of student: "))
+for i in range(n):
+    s=Student()
+    name=input("Enter student name: ")
+    s.setName(name)
+    marks=int(input("Enter student marks: "))
+    s.setMarks(marks)
+
+    print("HI", s.getName())
+    print("Your Marks are: ", s.getMarks())
