@@ -86,25 +86,125 @@
 #Getter and setter method 
 
 
-class Student:
-    def setName(self, name):
-        self.name=name
-    def getName(self):
-        return self.name
+# class Student:
+#     def setName(self, name):
+#         self.name=name
+#     def getName(self):
+#         return self.name
     
-    def setMarks(self, marks):
-        self.marks=marks
-    def getMarks(self):
-        return self.marks    
+#     def setMarks(self, marks):
+#         self.marks=marks
+#     def getMarks(self):
+#         return self.marks    
     
 
-n=int(input("Enter the Number of student: "))
-for i in range(n):
-    s=Student()
-    name=input("Enter student name: ")
-    s.setName(name)
-    marks=int(input("Enter student marks: "))
-    s.setMarks(marks)
+# n=int(input("Enter the Number of student: "))
+# for i in range(n):
+#     s=Student()
+#     name=input("Enter student name: ")
+#     s.setName(name)
+#     marks=int(input("Enter student marks: "))
+#     s.setMarks(marks)
 
-    print("HI", s.getName())
-    print("Your Marks are: ", s.getMarks())
+#     print("HI", s.getName())
+#     print("Your Marks are: ", s.getMarks())
+
+
+
+
+#CLASS METHOD
+
+# class Animal:
+#     legs=4
+#     @classmethod
+#     def walk(cls,name):
+#         print("{} walks by {} legs".format(name,cls.legs))
+
+# a=Animal()
+# a.walk("Lion")
+# a.walk("cat")
+
+
+
+
+#WAP: To track the number of object created...
+
+
+# class Test:
+#     count=0
+#     def __init__(self):
+#         Test.count=Test.count+1
+#     @classmethod
+#     def noOfObject(cls):
+#         print("The number of objects created are: ", cls.count)
+# t1=Test()
+# t2=Test()
+# t5=Test()
+
+# Test.noOfObject()       #-------------->  The number of objects created are:  3
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ONE CLASS METHOD CAN BE ACCESS IN ANOTHER CLASS:
+
+
+
+# class Students:
+#     def __init__(self,sno, sname, smarks):
+#         self.sno=sno
+#         self.sname=sname
+#         self.smarks=smarks
+
+#     def display(self):
+#         print("The Student no is",self.sno)
+#         print("The Student name is",self.sname)
+#         print("The Student marks are",self.smarks)
+
+
+# s= Students(101,"Durga", 90)
+
+# class Test:
+#     def modify(s):
+#         s.smarks=e.smarks+1
+#         s.display()
+
+# Test.modify(s)
+
+
+
+
+
+
+
+class Person:
+    def __init__(self):
+        print("Person class constructor called....")
+        self.name="Krishna"
+        self.db= self.Dob()
+    def display(self):
+        print("Name:", self.name)
+
+    class Dob:
+        def __init__(self):
+            print("DOB class constructor called....")
+            self.dd=26
+            self.mm=6
+            self.yy=2005
+        def display(self):
+            print("DOB: {}/{}/{}".format(self.dd,self.mm,self.yy))
+
+
+t=Person()  #-------->  Person class constructor called....
+                        #@DOB class constructor called....
+t.display()  #-------->  Name: Krishna
+t.db.display()  #  ---------->  DOB: 26/6/2005
