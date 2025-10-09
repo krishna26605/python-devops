@@ -186,25 +186,101 @@
 
 
 
-class Person:
+# class Person:
+#     def __init__(self):
+#         print("Person class constructor called....")
+#         self.name="Krishna"
+#         self.db= self.Dob()
+#     def display(self):
+#         print("Name:", self.name)
+
+#     class Dob:
+#         def __init__(self):
+#             print("DOB class constructor called....")
+#             self.dd=26
+#             self.mm=6
+#             self.yy=2005
+#         def display(self):
+#             print("DOB: {}/{}/{}".format(self.dd,self.mm,self.yy))
+
+
+# t=Person()  #-------->  Person class constructor called....
+#                         #@DOB class constructor called....
+# t.display()  #-------->  Name: Krishna
+# t.db.display()  #  ---------->  DOB: 26/6/2005
+
+
+
+
+
+
+
+
+#COMPOSITION [Has-A-Relationship]
+
+
+
+
+# class Car:
+#     def __init__(self,name,brand,color):
+#         self.name=name
+#         self.brand=brand
+#         self.color=color
+#     def displayCarInfo(self):
+#         print("Car Name is {}\nCar Brand is {}\nCar Color is {}".format(self.name,self.brand,self.color))
+
+
+
+# class Employee:
+#     def __init__(self,ename,eComName, car):
+#         self.ename=ename
+#         self.eComName=eComName
+#         self.car=car
+
+#     def empInfoDisplay(self):
+#         print("Employee Name: {}\nEmployee Company Name: {}\n".format(self.ename,self.eComName))
+#         print("Employee Car Details: ")
+#         self.car.displayCarInfo()
+
+# c=Car("Verna", "Hyundai" , "Black")
+# E=Employee("Krishna", "Siemens" , c)
+# E.empInfoDisplay()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# INHERITENCE
+
+
+
+class Parent:
     def __init__(self):
-        print("Person class constructor called....")
-        self.name="Krishna"
-        self.db= self.Dob()
-    def display(self):
-        print("Name:", self.name)
+        print("Parent class Constructor..")
 
-    class Dob:
-        def __init__(self):
-            print("DOB class constructor called....")
-            self.dd=26
-            self.mm=6
-            self.yy=2005
-        def display(self):
-            print("DOB: {}/{}/{}".format(self.dd,self.mm,self.yy))
+    def m1(self):
+        print("M1 method of parent ..")
 
 
-t=Person()  #-------->  Person class constructor called....
-                        #@DOB class constructor called....
-t.display()  #-------->  Name: Krishna
-t.db.display()  #  ---------->  DOB: 26/6/2005
+class Child(Parent):
+    def __init__(slef):
+        super().__init__()
+
+        print("Child class Constructor")
+
+    
+    def m1(self):
+        super().m1()
+        print("Child class m1 method")
+
+C=Child()
+C.m1()
