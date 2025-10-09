@@ -263,24 +263,157 @@
 
 
 
-class Parent:
-    def __init__(self):
-        print("Parent class Constructor..")
+# class Parent:
+#     def __init__(self):
+#         print("Parent class Constructor..")
 
-    def m1(self):
-        print("M1 method of parent ..")
+#     def m1(self):
+#         print("M1 method of parent ..")
 
 
-class Child(Parent):
-    def __init__(slef):
-        super().__init__()
+# class Child(Parent):
+#     def __init__(slef):
+#         super().__init__()
 
-        print("Child class Constructor")
+#         print("Child class Constructor")
 
     
-    def m1(self):
-        super().m1()
-        print("Child class m1 method")
+#     def m1(self):
+#         super().m1()
+#         print("Child class m1 method")
 
-C=Child()
-C.m1()
+# C=Child()
+# C.m1()
+
+
+
+
+
+
+
+
+# class P:
+#     x=5666
+#     def __init__(self):
+#         self.x=10
+    
+# class Q(P):
+#     def __init__(self):
+#         super().__init__()
+#         self.y=20
+#         print(super().x)   #------------> 5666 because it is on class level 
+#         print(self.__dict__) # ------------>  {'x': 10, 'y': 20}
+
+# q=Q()
+
+
+
+
+# class P:
+#     a=8888
+#     def m1(self):
+#         self.a=10
+    
+# class C(P):
+#     def __init__(self):
+#         self.a=34
+#         print(self.a)              #----------->  34
+#         super().m1()
+#         print(self.a)               #---------->  10
+#         print(super().a)            #----------> 8888
+
+# c=C()
+
+
+
+
+
+
+
+# class P:
+#     def __init__(self):
+#         self.b=10
+
+
+# class C(P):
+#     def __init__(self):
+#         self.b=23
+#         print(self.b)         #--------------> 23
+#         super().__init__()
+#         print(self.b)          #-------------> 10
+
+# c=C()
+
+
+
+
+#TYPES OF INHERERITENCE 
+
+
+# 1.SINGLE 
+
+
+# class P:
+#     def m1(self):
+#         print("Paremnt class")
+    
+# class C(P):
+#     def m2(self):
+#         print("Child class")
+
+# c=C()
+# c.m1()
+# c.m2()
+
+
+
+
+# 2. MULTIPLE LEVEL 
+
+
+
+# class GrandFather:
+#     def m1(self):
+#         print("Grand Father class")
+    
+# class Father(GrandFather):
+#     def m2(self):
+#         print("Father class")
+
+# class Me(Father):
+#     def m3(self):
+#         print("Mine class")
+
+
+# m= Me()
+# m.m1()
+# m.m2()
+# m.m3()
+
+
+
+
+#3 . HIERARCHICAL 
+
+
+# class GrandFather:
+#     def m1(self):
+#         print("Grand Father class")
+    
+# class Father(GrandFather):
+#     def m2(self):
+#         print("Child class-1")
+
+# class Kaka(GrandFather):
+#     def m3(self):
+#         print("Child class-2")
+
+
+# f=Father()
+# f.m1()
+# f.m2()
+
+
+# k=Kaka()
+# k.m1()
+# k.m3()
