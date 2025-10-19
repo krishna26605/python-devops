@@ -317,26 +317,26 @@
 #NOTE: multiple decorator can be applied to single function
 
 
-# def decor(func):
-#     def inner(name):
-#         print("First decor function executed...")
-#         func(name)
-#     return inner
+def decor(func):
+    def inner(name):
+        print("First decor function executed...")
+        func(name)
+    return inner
 
-# def decor2(func):
-#     def inner(name):
-#         print("Second decor executed....")
-#         func(name)
-#     return inner 
-
-
-# @decor
-# @decor2
-# def wish(name):
-#     print("Hello good morning", name)
+def decor2(func):
+    def inner(name):
+        print("Second decor executed....")
+        func(name)
+    return inner 
 
 
-# wish("durga")
+@decor
+@decor2
+def wish(name):
+    print("Hello good morning", name)
+
+
+wish("durga")
 
 #----------------------------------------------------------------
 
@@ -356,7 +356,7 @@
 #     return inner
 
 # @decor1
-# @decor1
+# @decor2
 # def num():
 #     return 10
 
@@ -454,4 +454,5 @@
 #     if x>100:
 #         break
 #     print(x)
+
 
